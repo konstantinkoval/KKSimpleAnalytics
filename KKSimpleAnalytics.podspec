@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "KKSimpleAnalytics"
-  s.version          = "1.0"
+  s.version          = "0.1.0"
   s.summary          = "Google Analytics made Simple. Automatic page view tracking"
   s.description      = <<-DESC
                        Google Analytics page tracking. 
@@ -20,9 +20,9 @@ Pod::Spec.new do |s|
   # s.ios.deployment_target = '6.0'
   s.requires_arc = true
 
-  s.source_files = 'KKSimpleAnalytics'
+  s.source_files = 'KKSimpleAnalytics/**/*.{h,m}'
 
   # Pod Dependencies
-  s.dependencies = 'GoogleAnalytics-iOS-SDK', '3.0.6'
-  s.dependencies = 'JRSwizzle', '1.0'
+  s.dependency 'GoogleAnalytics-iOS-SDK', '3.0.6'
+  s.dependency 'JRSwizzle', '1.0'
 end

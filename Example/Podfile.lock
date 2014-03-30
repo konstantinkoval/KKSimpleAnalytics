@@ -1,0 +1,20 @@
+PODS:
+  - GoogleAnalytics-iOS-SDK (3.0.6)
+  - JRSwizzle (1.0)
+  - KKSimpleAnalytics (0.1.0):
+    - GoogleAnalytics-iOS-SDK (= 3.0.6)
+    - JRSwizzle (= 1.0)
+
+DEPENDENCIES:
+  - KKSimpleAnalytics (from `/Users/konstantin/My_Projects/BLogAndOther/KKSimpleAnalytics/KKSimpleAnalytics.podspec`)
+
+EXTERNAL SOURCES:
+  KKSimpleAnalytics:
+    :path: /Users/konstantin/My_Projects/BLogAndOther/KKSimpleAnalytics/KKSimpleAnalytics.podspec
+
+SPEC CHECKSUMS:
+  GoogleAnalytics-iOS-SDK: 4f77f2cce5216e590343ce0b75ac491aa249ca89
+  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
+  KKSimpleAnalytics: dff8d1de62adbde1a7c1e9d89fd3dea84d2dcc61
+
+COCOAPODS: 0.30.0

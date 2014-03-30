@@ -1,6 +1,6 @@
 //
-//  KKSimpleAnalyticsTests.m
-//  KKSimpleAnalyticsTests
+//  KKSimpleAnalyticsExampleTests.m
+//  KKSimpleAnalyticsExampleTests
 //
 //  Created by Konstantin Koval on 30/03/14.
 //  Copyright (c) 2014 Konstantin Koval. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface KKSimpleAnalyticsTests : XCTestCase
+@interface KKSimpleAnalyticsExampleTests : XCTestCase
 
 @end
 
-@implementation KKSimpleAnalyticsTests
+@implementation KKSimpleAnalyticsExampleTests
 
 - (void)setUp
 {

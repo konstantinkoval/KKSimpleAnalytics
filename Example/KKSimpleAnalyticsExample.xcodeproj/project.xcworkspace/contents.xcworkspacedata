@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:KKSimpleAnalytics.xcodeproj">
+      location = "self:KKSimpleAnalyticsExample.xcodeproj">
    </FileRef>
 </Workspace>

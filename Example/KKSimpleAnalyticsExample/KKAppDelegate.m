@@ -1,6 +1,6 @@
 //
 //  KKAppDelegate.m
-//  KKSimpleAnalytics
+//  KKSimpleAnalyticsExample
 //
 //  Created by Konstantin Koval on 30/03/14.
 //  Copyright (c) 2014 Konstantin Koval. All rights reserved.
@@ -14,9 +14,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-49531620-1"];
+    // Override point for customization after application launch.
     return YES;
 }
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -1,6 +1,6 @@
 //
 //  KKAppDelegate.h
-//  KKSimpleAnalytics
+//  KKSimpleAnalyticsExample
 //
 //  Created by Konstantin Koval on 30/03/14.
 //  Copyright (c) 2014 Konstantin Koval. All rights reserved.
@@ -11,4 +11,5 @@
 @interface KKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
 @end
