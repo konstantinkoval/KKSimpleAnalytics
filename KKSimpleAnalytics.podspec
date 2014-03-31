@@ -9,15 +9,14 @@ Pod::Spec.new do |s|
                        * UIViewController and page view will be send automatically. 
                        DESC
   s.homepage         = "https://medium.com/@KostiaKoval"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Konstantin Koval" => "konstantin.koval1@gmail.com" }
-  s.source           = { :git => "https://github.com/konstantinkoval/KKSimpleAnalytics", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/konstantinkoval/KKSimpleAnalytics.git", :tag => s.version.to_s }
 
   s.social_media_url = 'https://twitter.com/KostiaKoval'
 
-  # s.platform     = :ios, '6.0'
-  # s.ios.deployment_target = '6.0'
+  s.platform     = :ios, '5.0'
+  s.ios.deployment_target = '5.0'
   s.requires_arc = true
 
   s.source_files = 'KKSimpleAnalytics/**/*.{h,m}'
