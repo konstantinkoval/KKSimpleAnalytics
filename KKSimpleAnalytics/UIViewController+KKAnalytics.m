@@ -16,6 +16,8 @@
 @implementation UIViewController (KKAnalytics)
 ASSOCIATED(screenName, setScreenName, NSString*, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
 ASSOCIATED(tracker, setTracker, id<GAITracker>, OBJC_ASSOCIATION_ASSIGN)
+ASSOCIATED(trackers, setTrackers, NSArray*, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+ASSOCIATED(analyticsDelegate, setAnalyticsDelegate, id<ViewAnalyticsDelegate>, OBJC_ASSOCIATION_ASSIGN)
 
 + (void)load
 {
@@ -29,16 +31,32 @@ ASSOCIATED(tracker, setTracker, id<GAITracker>, OBJC_ASSOCIATION_ASSIGN)
     });
 }
 
-- (id<GAITracker>)activeTracker
-{
-    return self.tracker ? self.tracker : [[GAI sharedInstance] defaultTracker];
+- (id<GAITracker>)activeTracker {
+  return self.tracker ? self.tracker : [[GAI sharedInstance] defaultTracker];
 }
 
-- (void)trackPageView:(NSString *)screenName
-{
-    id tracker = [self activeTracker];
+- (NSArray *)activeTrackers {
+  
+  if(self.trackers) {
+    return self.trackers;
+  } else {
+    return @[[self activeTracker]];
+  }
+
+}
+
+- (void)trackPageView:(NSString *)screenName {
+  
+  NSArray *trackes = [self activeTrackers];
+  for (id<GAITracker> tracker in trackes) {
     [tracker set:kGAIScreenName value:screenName];
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+  }
+  
+  id<ViewAnalyticsDelegate> delegate = self.analyticsDelegate;
+  if (delegate && [delegate respondsToSelector:@selector(didTrackPageView:)]) {
+    [delegate didTrackPageView:screenName];
+  }
 }
 
 - (void)kkk_viewDidAppear:(BOOL)animated
