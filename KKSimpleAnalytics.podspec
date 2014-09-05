@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "KKSimpleAnalytics"
-  s.version          = "0.2.0"
+  s.version          = "0.2.1"
   s.summary          = "Google Analytics made Simple. Automatic page view tracking"
   s.description      = <<-DESC
                        Google Analytics page tracking. 
