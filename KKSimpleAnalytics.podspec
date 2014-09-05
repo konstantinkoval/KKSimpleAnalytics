@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
   s.source_files = 'KKSimpleAnalytics/**/*.{h,m}'
 
   # Pod Dependencies
-  s.dependency 'GoogleAnalytics-iOS-SDK', '3.0.6'
+  s.dependency 'GoogleAnalytics-iOS-SDK', '3.0.3c'
   s.dependency 'JRSwizzle', '1.0'
 end
